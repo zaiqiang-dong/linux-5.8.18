@@ -2,6 +2,11 @@
 #
 # Makefile for the kernel block layer
 #
+CFLAGS_bio.o = -O
+CFLAGS_blk-core.o = -O
+CFLAGS_blk-map.o = -O
+CFLAGS_blk-mq.o = -O
+CFLAGS_bounce.o = -O
 
 obj-$(CONFIG_BLOCK) := bio.o elevator.o blk-core.o blk-sysfs.o \
 			blk-flush.o blk-settings.o blk-ioc.o blk-map.o \
