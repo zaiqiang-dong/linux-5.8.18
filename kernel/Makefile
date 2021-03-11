@@ -3,6 +3,7 @@
 # Makefile for the linux kernel.
 #
 
+CFLAGS_signal.o 			+= -O
 obj-y     = fork.o exec_domain.o panic.o \
 	    cpu.o exit.o softirq.o resource.o \
 	    sysctl.o sysctl_binary.o capability.o ptrace.o user.o \
@@ -54,6 +55,9 @@ obj-$(CONFIG_FREEZER) += freezer.o
 obj-$(CONFIG_PROFILING) += profile.o
 obj-$(CONFIG_STACKTRACE) += stacktrace.o
 obj-y += time/
+CFLAGS_futex.o 			+= -O
+CFLAGS_compat.o 			+= -O
+CFLAGS_ptrace.o 			+= -O
 obj-$(CONFIG_FUTEX) += futex.o
 obj-$(CONFIG_GENERIC_ISA_DMA) += dma.o
 obj-$(CONFIG_SMP) += smp.o

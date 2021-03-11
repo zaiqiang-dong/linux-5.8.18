@@ -46,6 +46,9 @@ endif
 KCOV_INSTRUMENT		:= n
 
 CFLAGS_irq.o := -I $(srctree)/$(src)/../include/asm/trace
+CFLAGS_ptrace.o 			+= -O
+CFLAGS_stacktrace.o 			+= -O
+CFLAGS_signal.o 			+= -O
 
 obj-y			:= process_$(BITS).o signal.o
 obj-$(CONFIG_COMPAT)	+= signal_compat.o

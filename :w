@@ -2,7 +2,7 @@
 ifdef CONFIG_FUNCTION_TRACER
 CFLAGS_REMOVE_core.o = $(CC_FLAGS_FTRACE)
 endif
-CFLAGS_uprobes.o 			+= -O
+CFLAGS_upprobes.o 			+= -O
 
 obj-y := core.o ring_buffer.o callchain.o
 

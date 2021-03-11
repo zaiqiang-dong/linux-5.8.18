@@ -56,6 +56,7 @@ if [ $1 == "x86_64" ];then
     OUTDIR="x86_64-build-out"
     ARCHDIR="x86"
     CONFIGFILE="x86_64_defconfig"
+    #CONFIGFILE="debian_defconfig"
     mkdir $OUTDIR
     need_copy_config $ARCHDIR $CONFIGFILE
     make menuconfig O=./$OUTDIR/

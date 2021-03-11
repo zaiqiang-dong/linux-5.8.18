@@ -213,13 +213,16 @@ t_yes:
 t_no:
 	return false;
 }
+#define static_cpu_has(bit) boot_cpu_has(bit)
 
+#if 0
 #define static_cpu_has(bit)					\
 (								\
 	__builtin_constant_p(boot_cpu_has(bit)) ?		\
 		boot_cpu_has(bit) :				\
 		_static_cpu_has(bit)				\
 )
+#endif
 #endif
 
 #define cpu_has_bug(c, bit)		cpu_has(c, (bit))

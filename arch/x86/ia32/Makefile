@@ -3,6 +3,7 @@
 # Makefile for the ia32 kernel emulation subsystem.
 #
 
+CFLAGS_ia32_signal.o 			+= -O
 obj-$(CONFIG_IA32_EMULATION) := ia32_signal.o
 
 obj-$(CONFIG_IA32_AOUT) += ia32_aout.o

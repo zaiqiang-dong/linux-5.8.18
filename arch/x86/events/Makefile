@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0-only
+CFLAGS_core.o 			+= -O
 obj-y					+= core.o probe.o
 obj-$(CONFIG_PERF_EVENTS_INTEL_RAPL)	+= rapl.o
 obj-y					+= amd/

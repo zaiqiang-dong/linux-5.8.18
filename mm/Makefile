@@ -9,6 +9,13 @@ CFLAGS_pagewalk.o = -O
 CFLAGS_truncate.o = -O
 CFLAGS_page_io.o = -O
 CFLAGS_swapfile.o = -O
+CFLAGS_gup.o = -O
+CFLAGS_mprotect.o = -O
+CFLAGS_mremap.o = -O
+CFLAGS_madvise.o = -O
+
+CFLAGS_slab.o = -O
+CFLAGS_memcontrol.o = -O
 
 KASAN_SANITIZE_slab_common.o := n
 KASAN_SANITIZE_slab.o := n

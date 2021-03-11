@@ -12,7 +12,7 @@ CFLAGS_REMOVE_syscall_64.o	= $(CC_FLAGS_FTRACE)
 CFLAGS_REMOVE_syscall_32.o	= $(CC_FLAGS_FTRACE)
 CFLAGS_REMOVE_syscall_x32.o	= $(CC_FLAGS_FTRACE)
 
-CFLAGS_common.o			+= -fno-stack-protector
+CFLAGS_common.o			+= -fno-stack-protector -O
 CFLAGS_syscall_64.o		+= -fno-stack-protector
 CFLAGS_syscall_32.o		+= -fno-stack-protector
 CFLAGS_syscall_x32.o		+= -fno-stack-protector

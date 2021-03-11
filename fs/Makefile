@@ -6,6 +6,10 @@
 # Rewritten to use lists instead of if-statements.
 # 
 
+CFLAGS_eventpoll.o 			+= -O
+CFLAGS_io_uring.o 			+= -O
+CFLAGS_read_write.o 			+= -O
+CFLAGS_select.o 			+= -O
 obj-y :=	open.o read_write.o file_table.o super.o \
 		char_dev.o stat.o exec.o pipe.o namei.o fcntl.o \
 		ioctl.o readdir.o select.o dcache.o inode.o \

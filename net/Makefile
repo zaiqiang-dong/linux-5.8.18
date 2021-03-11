@@ -6,6 +6,8 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+CFLAGS_socket.o 			+= -O
+
 obj-$(CONFIG_NET)		:= devres.o socket.o core/
 
 tmp-$(CONFIG_COMPAT) 		:= compat.o

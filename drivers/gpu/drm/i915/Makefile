@@ -122,6 +122,8 @@ gt-y += \
 	gt/gen9_renderstate.o
 i915-y += $(gt-y)
 
+
+CFLAGS_i915_gem_shmem.o += -O
 # GEM (Graphics Execution Management) code
 gem-y += \
 	gem/i915_gem_busy.o \

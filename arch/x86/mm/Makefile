@@ -16,6 +16,9 @@ CFLAGS_REMOVE_mem_encrypt.o		= -pg
 CFLAGS_REMOVE_mem_encrypt_identity.o	= -pg
 endif
 
+CFLAGS_tlb.o 			+= -O
+CFLAGS_ioremap.o 			+= -O
+
 obj-y				:=  init.o init_$(BITS).o fault.o ioremap.o extable.o mmap.o \
 				    pgtable.o physaddr.o setup_nx.o tlb.o cpu_entry_area.o maccess.o
 

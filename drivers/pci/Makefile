@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 #
 # Makefile for the PCI bus specific drivers.
+CFLAGS_proc.o 			+= -O
 
 obj-$(CONFIG_PCI)		+= access.o bus.o probe.o host-bridge.o \
 				   remove.o pci.o pci-driver.o search.o \
