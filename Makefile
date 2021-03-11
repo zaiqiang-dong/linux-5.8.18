@@ -416,7 +416,7 @@ HOSTCXX	= g++
 endif
 
 export KBUILD_USERCFLAGS := -Wall -Wmissing-prototypes -Wstrict-prototypes \
-			      -O0 -fomit-frame-pointer -std=gnu89 -g3 -gdwarf-2
+			      -O0 -fomit-frame-pointer -std=gnu89 -g3 -gdwarf-2 -Wunused-variable
 export KBUILD_USERLDFLAGS :=
 
 KBUILD_HOSTCFLAGS   := $(KBUILD_USERCFLAGS) $(HOST_LFS_CFLAGS) $(HOSTCFLAGS)
